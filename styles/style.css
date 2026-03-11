@@ -1,5 +1,97 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  background-image: var(--background-image);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  padding: var(--padding-base);
+  position: relative;
+}
+
+.decorated-zone::after,
+.decorated-zone::before {
+  content: "";
+  inline-size: 25px;
+  block-size: 25px;
+  border: 1px solid var(--accent-color);
+  position: absolute;
+}
+
+.decorated-zone::before {
+  top: var(--decor-offset);
+  right: var(--decor-offset);
+  border-bottom: none;
+  border-left: none;
+}
+
+.decorated-zone::after {
+  bottom: var(--decor-offset);
+  left: var(--decor-offset);
+  border-top: none;
+  border-right: none;
+}
+
+.header__light {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: var(--decor-offset);
+  right: var(--decor-offset);
+  gap: var(--gap);
+  color: var(--accent-color);
+  margin-right: 9px;
+  text-transform: uppercase;
+}
+
+.header__light::after {
+  content: "";
+  inline-size: 9px;
+  block-size: 9px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  box-shadow: 0 0 4px 2px var(--accent-color); 
+}
+
+.header__theme-menu {
+  /* align-self: center; */
+}
+
+.header__theme-menu-list {
+  margin-block-start: 39px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+.header__theme-menu-button {
+  background-color: transparent;
+  border: none;
+  padding: 1.5px 13px;
+  color: var(--accent-color);
+  text-transform: lowercase;
+  cursor: pointer;
+}
+.header__title {
+  align-self: start;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  color: var(--title-color);
+  text-shadow: var(--title-shadow);
+}
+
+.header__paragraph {
+  font-weight: var(--font-weight-bold);
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+  color: var(--color-subtitle)
 }
