@@ -18,7 +18,7 @@
   <body class="page">
     <header class="header decorated-zone">
       <div class="header__light">
-        <span class="header__light-rec">REC</span>
+        <span class="header__light-rec" aria-hidden="true">REC</span>
       </div>
       <nav class="header__theme-menu">
         <ul class="header__theme-menu-list">
@@ -217,45 +217,47 @@
           </article>
         </div>
       </section>
-      <section class="gallery content-section">
-        <h2 class="content-section__heading">А можно в картинках?</h2>
-        <article class="gallery">
-          <img
-            src="images/sunset.png"
-            class="grid__image"
-            alt="Изображение рассвета"
-            loading="lazy"
-            type="image/png"
-          />
-          <img
-            src="images/ice-cream.png"
-            class="grid__image"
-            alt="Изображение мороженного"
-            loading="lazy"
-            type="image/png"
-          />
-          <img
-            src="images/tape.png"
-            class="grid__image"
-            alt="Изображение касеты"
-            loading="lazy"
-            type="image/png"
-          />
-          <img
-            src="images/books.png"
-            class="grid__image"
-            alt="Изображение стопки книг"
-            loading="lazy"
-            type="image/png"
-          />
-          <img
-            src="images/street.png"
-            class="grid__image"
-            alt="Изображение городской улицы"
-            loading="lazy"
-            type="image/png"
-          />
-        </article>
+      <section class="gallery">
+        <div class="content-section__column">
+          <h2 class="content-section__subheading title-decor">А можно в картинках?</h2>
+          <article class="content-section__gallery">
+            <img
+              src="images/sunset.png"
+              class="grid__image"
+              alt="Изображение рассвета"
+              loading="lazy"
+              type="image/png"
+            />
+            <img
+              src="images/ice-cream.png"
+              class="grid__image"
+              alt="Изображение мороженного"
+              loading="lazy"
+              type="image/png"
+            />
+            <img
+              src="images/tape.png"
+              class="grid__image"
+              alt="Изображение касеты"
+              loading="lazy"
+              type="image/png"
+            />
+            <img
+              src="images/books.png"
+              class="grid__image"
+              alt="Изображение стопки книг"
+              loading="lazy"
+              type="image/png"
+            />
+            <img
+              src="images/street.png"
+              class="grid__image"
+              alt="Изображение городской улицы"
+              loading="lazy"
+              type="image/png"
+            />
+          </article>
+        </div>
       </section>
     </main>
     <footer class="footer decorated-zone">
