@@ -5,6 +5,8 @@
   font-size: var(--font-size-base);
   line-height: var(--line-height);
   background-color: var(--background-color);
+  inline-size: 100%;
+  min-block-size: 100vh;
 }
 
 .header {
@@ -17,6 +19,7 @@
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  min-block-size: 100vh;
 }
 
 .decorated-zone::after,
@@ -84,6 +87,7 @@
   cursor: pointer;
   inline-size: 70px;
   block-size: 26px;
+  appearance: none;
 }
 
 .header__theme-menu-button_active {
@@ -106,14 +110,17 @@
 
 .header__title {
   align-self: start;
-  margin: 65px 0px 55px 0px;
+  margin-block: 65px 55px;
+  line-height: 0.825;
   color: var(--header-logo-color);
   font-size: var(--header-logo-size);
   text-shadow: var(--logo-shadow); 
 }
 
 .header__paragraph {
-  margin-block-end: 56px;
+  inline-size: 355px;
+  block-size: 117px;
+  line-height: var(--line-height-base);
   font-weight: var(--font-weight-bold);
 }
 
@@ -131,13 +138,25 @@
 
 .content-section {
   display: grid;
-  grid-template-columns: minmax(auto-fit, 1fr);
+  grid-template-columns: 1fr;
   gap: 20px;
 }
 
 .content__link {
   text-decoration: none;
   text-shadow: 2px 2px 0px var(--accent-color);
+}
+
+.content__link:hover {
+  border-bottom: 1px solid var(--text-color-base);  
+}
+
+.content__link:focus {
+  outline: none;
+}
+
+.content__link:focus-visible {
+  outline: 1px solid var(--text-color-base);
 }
 
 .content-section__heading {
@@ -155,6 +174,8 @@
 
 .content-section__text {
   color: var(--text-color-base);
+  line-height: var(--line-height-base);
+  padding-inline-end: 4px;
   font-size: inherit;
 }
 
@@ -173,12 +194,49 @@
   align-items: center;
   justify-content: center;
   padding: var(--padding-base);
-  min-block-size: 100vh;
   position: relative;
+  min-block-size: 100vh;
 }
 
 .footer__logo {
   font-size: var(--footer-logo-size);
   color: var(--footer-logo-color);
   text-shadow: var(--logo-shadow);
+}
+
+@media (min-width: 768px) {
+  :root {
+    --padding-base: 20px;
+  }
+
+  .header__light {
+    margin-block-end: 146px;
+  }
+
+  .header__title {
+    margin-inline-start: calc(var(--padding-base) * -1);
+    margin-block: 173px 162px;
+  }
+
+  .content {
+    padding-block: 60px;
+  }
+
+  .content-section__heading {
+    grid-column: 1;
+    grid-row: 1;
+    max-inline-size: 236px;
+  }
+
+  .content-section {
+    grid-template-columns: max-content 1fr;
+    align-items: start;
+  }
+  
+  .content-section__column {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
 }
