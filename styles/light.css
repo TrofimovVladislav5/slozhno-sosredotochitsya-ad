@@ -32,7 +32,7 @@
   }
 
   .page .header__theme-menu-button:hover {
-    --accent-color-hover: rgba(50, 49, 45, 0.4); 
+    --accent-color-hover: rgba(50, 49, 45, 0.4);
   }
 
   .page .header__light-rec {
@@ -46,7 +46,7 @@
   }
 
   .header__theme-menu-button:hover {
-    --accent-color-hover: rgba(50, 49, 45, 0.4); 
+    --accent-color-hover: rgba(50, 49, 45, 0.4);
   }
 
   .header__light-rec {

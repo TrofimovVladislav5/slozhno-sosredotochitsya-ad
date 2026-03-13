@@ -67,7 +67,7 @@
   box-shadow: 0px 0px 4px 2px var(--accent-color);
   background-color: var(--accent-color);
   inline-size: 9px;
-  block-size: 9px; 
+  block-size: 9px;
 }
 
 .header__theme-menu-list {
@@ -114,13 +114,13 @@
   color: var(--header-logo-color);
   font-size: var(--header-logo-size);
   line-height: 0.825;
-  text-shadow: var(--logo-shadow); 
+  text-shadow: var(--logo-shadow);
 }
 
 .header__paragraph {
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-base);
-  inline-size: 355px;
+  inline-size: 100%;
   block-size: 117px;
 }
 
@@ -185,7 +185,7 @@
 }
 
 .content__link:hover {
-  border-bottom: 1px solid var(--text-color-base);  
+  border-bottom: 1px solid var(--text-color-base);
 }
 
 .content__link:focus {
