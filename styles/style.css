@@ -145,6 +145,10 @@
   font-size: inherit;
 }
 
+.content-section__heading-regular {
+  font-weight: var(--font-weight-regular);
+}
+
 .content-section__subheading {
   font-size: inherit;
 }
@@ -152,4 +156,29 @@
 .content-section__text {
   color: var(--text-color-base);
   font-size: inherit;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap-base);
+}
+
+.grid__image {
+  inline-size: 100%;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-base);
+  min-block-size: 100vh;
+  position: relative;
+}
+
+.footer__logo {
+  font-size: var(--footer-logo-size);
+  color: var(--footer-logo-color);
+  text-shadow: var(--logo-shadow);
 }
